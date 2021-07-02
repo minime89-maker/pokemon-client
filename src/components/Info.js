@@ -60,10 +60,6 @@ const Info = () => {
 							</LinearProgress>
 							<Typography variant='h5' gutterBottom >Speed: {pokeInfo.Speed}</Typography>
 						</Box>
-						
-						{/* <h3>Attack: {pokeInfo.Attack}</h3>
-						<h3>Defense: {pokeInfo.Defense}</h3>
-						<h3>Speed: {pokeInfo.Speed}</h3> */}
 					</Card>
 				)}
 			</Grid>

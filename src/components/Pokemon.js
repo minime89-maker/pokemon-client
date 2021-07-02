@@ -107,9 +107,7 @@ const Pokemon = () => {
 								))}
 								<Button className={classes.more} color='primary' onClick={() => history.push(`/pokemon/${pokemon.id}/info`)}>
 									Base
-								</Button>
-								{/* <h3>Attack: {pokemon.base.Attack}</h3>
-								<h3>Defense: {pokemon.base.Defense}</h3> */}							
+								</Button>						
 					</Card>
 				)}
 		</Grid>
