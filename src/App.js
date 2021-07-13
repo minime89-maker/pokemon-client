@@ -1,24 +1,69 @@
 import './App.css';
+import React, { useState, useEffect } from 'react'
 import Pokemons from './components/Pokemons'
-import Pokemon from './components/Pokemon'
-import Info from './components/Info'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Landing from './components/Landing'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Button, makeStyles } from '@material-ui/core'
+import Battle from './components/Battle'
+import Leaderboard from './components/Leaderboard'
 
-function App() {
+
+const useStyles = makeStyles({
+  scroll: {
+    position: 'fixed',
+    bottom: '40px',
+    left: '40px',
+    backgroundColor: '#FFCB05',
+    fontSize: '24px',
+    zIndex: 100
+  }
+})
+
+const App = () => {
+  const classes = useStyles()
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    document.title = "Pokemon Fight | WBS"
+  }, [])
+
+
+  const testScrollTop = () => {
+    if (window.pageYOffset > 300) {
+      setScroll(true)
+    } else {
+      setScroll(false)
+    }
+  }
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', testScrollTop)
+  }, [])
+
+
   return (
-   <Router>
-     <Switch>
-       <Route path="/pokemon/:id/:info">
-          <Info />
-       </Route>
-       <Route path="/pokemon/:id">
-          <Pokemon />
-       </Route>
-       <Route path="/">
+    <Router>
+      <Switch>
+        <Route path="/pokemon/fights">
+          {scroll && <Button className={classes.scroll} onClick={scrollTop} variant='contained' color='primary'>&#8593;</Button>}
+          <Leaderboard />
+        </Route>
+        <Route path="/pokemon/arena">
+          <Battle />
+        </Route>
+        <Route path="/pokemon">
+          {scroll && <Button className={classes.scroll} onClick={scrollTop} variant='contained' color='primary'>&#8593;</Button>}
           <Pokemons />
-       </Route>
-     </Switch>
-   </Router>
+        </Route>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
