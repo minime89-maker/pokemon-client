@@ -158,7 +158,7 @@ const Battle = () => {
 	
 	const newGame = (e) => {
 		e.preventDefault()
-		location.reload()
+		window.location.reload()
 	}
 
 
