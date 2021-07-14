@@ -59,7 +59,7 @@ const App = () => {
           {scroll && <Button className={classes.scroll} onClick={scrollTop} variant='contained' color='primary'>&#8593;</Button>}
           <Pokemons />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Landing />
         </Route>
       </Switch>
