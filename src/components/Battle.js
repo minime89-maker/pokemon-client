@@ -155,6 +155,10 @@ const Battle = () => {
 		}
 	}
 
+	const refreshPage = () => {
+		window.location.reload(false)
+	}
+
 
 	return (
 		<div className={classes.container}>
@@ -210,7 +214,7 @@ const Battle = () => {
 			<div className={classes.btnGroup}>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon')}>&#8592; HOME</Button>
 				<Button variant="contained" color="secondary" onClick={handleFight}>FIGHT</Button>
-				<Button variant="contained" color="secondary" onClick={() => window.location.reload()}>NewGame</Button>
+				<Button variant="contained" color="secondary" onClick={refreshPage}>NewGame</Button>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon/fights')}>&#8594; Board</Button>
 			</div>
 		</div>
