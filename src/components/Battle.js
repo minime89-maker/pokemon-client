@@ -63,7 +63,7 @@ const Battle = () => {
 
 			.then((res) => {
 				console.log(res.data)
-				setRandomPlayer(res.data)
+				setRandomPlayer(res.data.id)
 				setPLayerData(res.data)
 				setLoading(false)
 			})
@@ -81,7 +81,7 @@ const Battle = () => {
 		axios.get(`https://pokemon-express-api.herokuapp.com/pokemon/${randomComputer}`)
 			.then((res) => {
 				console.log(res.data)
-				setRandomComputer(res.data)
+				setRandomComputer(res.data.id)
 				setComputerData(res.data)
 				setLoading(false)
 			})
