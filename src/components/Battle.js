@@ -51,7 +51,7 @@ const Battle = () => {
 	const [computerData, setComputerData] = useState(null)
 	const history = useHistory()
 	const [newHP, setNewHP] = useState(0)
-
+	const [newGame, setNewGame] = useState()
 
 
 
@@ -212,7 +212,7 @@ const Battle = () => {
 			<div className={classes.btnGroup}>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon')}>&#8592; HOME</Button>
 				<Button variant="contained" color="secondary" onClick={handleFight}>FIGHT</Button>
-				<Button variant="contained" color="secondary">NewGame</Button>
+				<Button variant="contained" color="secondary" onClick={() => setNewGame({})}>NewGame</Button>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon/fights')}>&#8594; Board</Button>
 			</div>
 		</div>
