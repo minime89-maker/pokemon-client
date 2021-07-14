@@ -6,9 +6,9 @@ Project created during the training at WBS Coding School using MERN stack:
 <br />
 
 ```MongoDB``` <br/>
-```Express``` <br/>
+```Express.js``` <br/>
 ```React``` <br/>
-```Node``` <br/>
+```Node.js``` <br/>
 
 <br />
 
