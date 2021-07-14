@@ -211,7 +211,7 @@ const Battle = () => {
 			<div className={classes.btnGroup}>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon')}>&#8592; HOME</Button>
 				<Button variant="contained" color="secondary" onClick={handleFight}>FIGHT</Button>
-				<Button variant="contained" color="secondary" onClick={() => history.push('/pokemon/arena')}>NewGame</Button>
+				<Button variant="contained" color="secondary" onClick={() => history.go(0)}>NewGame</Button>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon/fights')}>&#8594; Board</Button>
 			</div>
 		</div>
