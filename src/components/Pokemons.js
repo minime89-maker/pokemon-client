@@ -86,7 +86,6 @@ const Pokemons = () => {
 				HP={pokemon.base.HP}
 				speed={pokemon.base.Speed}
 				/>
-				break;
 			default: 
 				return <h1>Pokemons</h1>
 		}
@@ -113,6 +112,8 @@ const Pokemons = () => {
 								return pokemon
 							} else if (pokemon.name.english.toLowerCase().includes(search.toLowerCase())) {
 								return pokemon
+							} else {
+								return <h1>Pokemons</h1>
 							}
 						})
 						.map((pokemon, index) => {
