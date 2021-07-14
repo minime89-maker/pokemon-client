@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react'
 import Pokemons from './components/Pokemons'
 import Landing from './components/Landing'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import { Button, makeStyles } from '@material-ui/core'
 import Battle from './components/Battle'
 import Leaderboard from './components/Leaderboard'
@@ -46,7 +46,6 @@ const App = () => {
 
 
   return (
-    <Router>
       <Switch>
         <Route path="/pokemon/fights">
           {scroll && <Button className={classes.scroll} onClick={scrollTop} variant='contained' color='primary'>&#8593;</Button>}
@@ -63,7 +62,6 @@ const App = () => {
           <Landing />
         </Route>
       </Switch>
-    </Router>
   );
 }
 
