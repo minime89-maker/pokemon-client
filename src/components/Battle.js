@@ -155,6 +155,11 @@ const Battle = () => {
 			}, 1000)
 		}
 	}
+	
+	const newGame = (e) => {
+		e.preventDefault()
+		location.reload()
+	}
 
 
 	return (
@@ -211,7 +216,7 @@ const Battle = () => {
 			<div className={classes.btnGroup}>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon')}>&#8592; HOME</Button>
 				<Button variant="contained" color="secondary" onClick={handleFight}>FIGHT</Button>
-				<Button variant="contained" color="secondary" onClick={() => window.location.reload(true)}>NewGame</Button>
+				<Button variant="contained" color="secondary" onClick={newGame}>NewGame</Button>
 				<Button variant="contained" color="primary" onClick={() => history.push('/pokemon/fights')}>&#8594; Board</Button>
 			</div>
 		</div>
