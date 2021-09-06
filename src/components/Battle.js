@@ -149,7 +149,7 @@ const Battle = () => {
 						animate={{ scale: 1.5, rotate: 360 }}
 					>
 						<img src="/winner.png" alt='winner' width="200" /> <br />
-						<motion.img src={`https://cdn.traction.one/pokedex/pokemon/${playerData.id}.png`} alt="ball" width="200"
+						<motion.img src={`https://cdn.traction.one/pokedex/pokemon/${computerData.id}.png`} alt="ball" width="200"
 						/>
 					</motion.div>)
 			}, 1000)
@@ -168,7 +168,7 @@ const Battle = () => {
 						<PokemonCard
 							index={playerData.id}
 							english={playerData.name.english}
-							image={`https://pokeres.bastionbot.org/images/pokemon/${playerData.id}.png`}
+							image={`https://cdn.traction.one/pokedex/pokemon/${playerData.id}.png`}
 							japanese={playerData.name.japanese}
 							typeOne={playerData.type[0]}
 							typeTwo={playerData.type[1]}
@@ -193,7 +193,7 @@ const Battle = () => {
 						<PokemonCard
 							index={computerData.id}
 							english={computerData.name.english}
-							image={`https://pokeres.bastionbot.org/images/pokemon/${computerData.id}.png`}
+							image={`https://cdn.traction.one/pokedex/pokemon/${computerData.id}.png`}
 							japanese={computerData.name.japanese}
 							typeOne={computerData.type[0]}
 							typeTwo={computerData.type[1]}

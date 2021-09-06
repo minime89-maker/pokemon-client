@@ -76,7 +76,6 @@ const Pokemons = () => {
 				index={index + 1}
 				english={pokemon.name.english}
 				image={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
-				
 				japanese={pokemon.name.japanese} 
 				typeOne={pokemon.type[0]}
 				typeTwo={pokemon.type[1]}

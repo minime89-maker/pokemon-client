@@ -56,7 +56,7 @@ const Landing = () => {
 			<Grid container className={classes.container} >
 				<Grid item xs={12} sm={6} className={classes.leftWrapper}>
 					<Typography variant="h1" className={classes.title}>Gotta Catch 'Em All!</Typography>
-					<Typography variant='body1' className={classes.subtitle}>Pokémon are creatures of all shapes and sizes who live in the wild or alongside humans. For the most part, Pokémon do not speak except to utter their names.</Typography>
+					<Typography variant='h6' className={classes.subtitle}>Pokémon are creatures of all shapes and sizes who live in the wild or alongside humans. For the most part, Pokémon do not speak except to utter their names.</Typography>
 					<Button color="primary" variant='contained' size="large" onClick={() => history.push(`/pokemon`)}>CATCH</Button>
 				</Grid>
 				<div className={classes.rightWrapper}>
