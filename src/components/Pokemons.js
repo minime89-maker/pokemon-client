@@ -75,7 +75,8 @@ const Pokemons = () => {
 				return <PokemonCard
 				index={index + 1}
 				english={pokemon.name.english}
-				image={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}
+				image={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+				
 				japanese={pokemon.name.japanese} 
 				typeOne={pokemon.type[0]}
 				typeTwo={pokemon.type[1]}
