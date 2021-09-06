@@ -133,7 +133,7 @@ const Battle = () => {
 						animate={{ scale: 1.5, rotate: 360 }}
 					>
 						<img src="/winner.png" alt='winner' width="200" /> <br />
-						<img src={`https://pokeres.bastionbot.org/images/pokemon/${playerData.id}.png`} alt="ball" width="160"
+						<img src={`https://cdn.traction.one/pokedex/pokemon/${playerData.id}.png`} alt="ball" width="160"
 
 						/>
 					</motion.div>)
@@ -149,7 +149,7 @@ const Battle = () => {
 						animate={{ scale: 1.5, rotate: 360 }}
 					>
 						<img src="/winner.png" alt='winner' width="200" /> <br />
-						<motion.img src={`https://pokeres.bastionbot.org/images/pokemon/${computerData.id}.png`} alt="ball" width="200"
+						<motion.img src={`https://cdn.traction.one/pokedex/pokemon/${playerData.id}.png`} alt="ball" width="200"
 						/>
 					</motion.div>)
 			}, 1000)
