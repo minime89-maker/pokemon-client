@@ -107,15 +107,7 @@ const Pokemons = () => {
 			<Grid container spacing={2} className={classes.container} >
 				{pokemonData &&
 					pokemonData
-						.filter((pokemon) => {
-							if (search === '') {
-								return pokemon
-							} else if (pokemon.name.english.toLowerCase().includes(search.toLowerCase())) {
-								return pokemon
-							} else {
-								return <h1>Pokemons</h1>
-							}
-						})
+						.filter(pokemon => pokemon.name.english === search)
 						.map((pokemon, index) => {
 							return (
 								<Grid item key={index} xs={12} sm={6} lg={3} >
